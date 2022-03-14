@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./leaflet/leaflet.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    #mapid {
+      height: 900px;
+    }
+  </style>
+  <div id="mapid"></div>
+  <script src="./leaflet/leaflet.js"></script>
+  <script>
+    const mymap = L.map('mapid').setView([39.9788, 116.30226], 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {
+      foo: 'bar'
+    }).addTo(mymap);
+  </script>
+</body>
+
+</html>
